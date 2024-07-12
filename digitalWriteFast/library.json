@@ -1,0 +1,28 @@
+{
+  "name": "digitalWriteFast",
+  "version": "1.2.0",
+  "keywords": "io, pin",
+  "description": "Fast pin access for AVR microcontrollers",
+  "include": "digitalWriteFast",
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/ArminJo/digitalWriteFast"
+  },
+  "exclude": "pictures",
+  "authors" :
+  [
+     {
+       "name":"Armin Joachimsmeyer",
+       "email": "armin.arduino@gmail.com",
+       "maintainer": true
+     },
+     {
+       "name":"Andreas Watterott"
+     }
+  ],
+  "license": "BSD-3-Clause",
+  "frameworks": "arduino",
+  "platforms": "atmelavr",
+  "headers": "digitalWriteFast.h"
+}
