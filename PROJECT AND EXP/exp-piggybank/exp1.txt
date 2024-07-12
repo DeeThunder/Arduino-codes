@@ -1,0 +1,48 @@
+#include <ESP32Servo.h>
+#include <Wire.h>
+#include <HCSR04.h>
+
+UltraSonicDistanceSensor distanceSensor(5, 18);
+Servo myservo;
+
+const int trigPin =13;
+const int echoPin =12;
+
+#define SOUND_SPEED 0.034
+#define CM_TO_INCH 0.393701
+
+long duration;
+float distanceCm;
+
+int pos=0;
+
+void setup(){
+  Serial.begin(9600);
+  myservo.attach(14);
+   pinMode(trigPin, OUTPUT);
+  pinMode(echoPin, INPUT);
+  }
+
+void loop(){
+  digitalWrite(trigPin, LOW); //clears the trigpin
+  delayMicroseconds(2);
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin, LOW);
+
+  duration = pulseIn (echoPin, HIGH);
+  distanceCm = duration * SOUND_SPEED/2;
+  Serial.print("Distance(cm): ");
+  Serial.println(distanceCm);
+  if ( distanceCm <= 5.00){
+    for (pos =180; pos>=0; pos-=90){
+    myservo.write(pos);
+    }
+  }
+    else {
+      for (pos =0; pos<=180; pos+=90){
+    myservo.write(pos);
+  }
+ }
+  delay(5000);
+}
