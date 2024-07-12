@@ -1,0 +1,47 @@
+#include <Wire.h>
+#include <LiquidCrystal_I2C.h>
+
+// Initialize the LCD with the I2C address 0x27
+LiquidCrystal_I2C lcd(0x27, 16, 2);
+
+// Variables
+int count = 0;              // Current count
+int steps = 0;              // Number of steps taken
+bool isUpward = true;       // Flag to indicate direction of count
+
+void setup() {
+  // Initialize the LCD
+  lcd.init();
+  lcd.backlight();
+
+
+  // Initialize count display on LCD
+  lcd.setCursor(0, 0);
+  lcd.print("Count: ");
+  lcd.setCursor(0, 1);
+  lcd.print("Steps: ");
+
+}
+void loop() 
+  // Update count and steps
+{  
+  for (count= 0; count<1000; count++){
+  lcd.setCursor(7, 0);
+  lcd.print(count);
+  }
+ for( steps= count; count<1000; steps++){
+  lcd.setCursor(7, 1);
+  lcd.print(steps);
+  lcd.setCursor(12, 1);
+  lcd.print("Up");
+  
+ }
+ if( count=1000)
+ {
+  steps--;
+  lcd.setCursor(12, 1);
+  lcd.print("Down");
+ }
+ 
+  delay(1000);
+}
