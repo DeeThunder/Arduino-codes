@@ -1,0 +1,5 @@
+Download the code
+open on Arduino IDE 
+upload to your esp32 board
+change the wifi ssid and password 
+copy the IP address from the serial monitor and input into your web browser
