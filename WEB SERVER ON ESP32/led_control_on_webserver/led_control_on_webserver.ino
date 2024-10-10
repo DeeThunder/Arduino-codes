@@ -2,8 +2,8 @@
 #include <WebServer.h>
 // #include <WiFiNINA.h>
 
-const char* ssid = "APITech";
-const char* password = "@ApiTech";
+const char* ssid = "Your-SSID";
+const char* password = "Your-Password";
 
 IPAddress local_IP(192,168,0,215);
 IPAddress gateway(192,168,0,1);
