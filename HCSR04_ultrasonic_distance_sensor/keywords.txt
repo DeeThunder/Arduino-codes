@@ -1,0 +1,4 @@
+VARSTEP_ultrasonic KEYWORD1
+
+distance_cm KEYWORD2
+distance_m KEYWORD3
