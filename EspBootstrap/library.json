@@ -1,0 +1,18 @@
+{
+  "name":"EspBootstrap",
+  "description":"Library helps bring new esp devices online and connected into ecosystem. Read and parse config from json files on the web or SPIFFS.",
+  "keywords":"eeprom,iot,wifi,config,json,parse",
+  "authors":
+  {
+    "name": "Anatoli Arkhipenko",
+    "maintainer": true
+  },
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/arkhipenko/EspBootstrap.git"
+  },
+  "version": "2.3.2",
+  "frameworks": "arduino",
+  "platforms": ["espressif8266", "espressif32"]
+}
