@@ -47,7 +47,9 @@ void setup(){
 if(!WiFi.config(local_IP, gateway, subnet, primaryDNS, secondaryDNS)){
   Serial.println("STA failed to configure");
 }
-  //initalize wifi
+
+
+  //Initalize wifi
   WiFi.begin(ssid, password);
 
   while (WiFi.status() != WL_CONNECTED) {

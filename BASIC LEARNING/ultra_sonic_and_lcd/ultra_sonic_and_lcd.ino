@@ -14,7 +14,7 @@ const int echoPin =18;
 
 long duration;
 float distanceCm;
-float distanceInch;
+float distanceInch; 
 
 void setup(){
   lcd.init();                    
